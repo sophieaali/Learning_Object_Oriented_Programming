@@ -28,7 +28,12 @@ class Employee:
   def set_salary(self, new_salary):
     self.salary = new_salary
   
-  
+  def give_raise(self, amount):
+        self.salary = self.salary + amount
+
+  def monthly_salary(self):
+        return self.salary/12
+
 # Create an object emp of class Employee  
 emp = Employee()
 
@@ -40,3 +45,6 @@ emp.set_salary(50000)
 
 print(emp.name)
 print(emp.salary)
+emp.give_raise(1500)
+print(emp.salary)
+print(emp.monthly_salary())
